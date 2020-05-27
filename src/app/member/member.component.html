@@ -1,0 +1,42 @@
+
+<div class="container" style="margin-top: 70px;">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>PhoneNumber</th>
+          <th>Gender</th>
+          <th>type</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let member of members">
+  
+          <td>{{ member.id }}</td>
+          <td> {{ member.name }}</td>
+          <td> {{ member.email }}</td>
+          <td> {{ member.phoneNumber }}</td>
+          <td> {{ member.gender }}</td>
+          <td> {{ member.type }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="selectMember(member)"> Show details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+<!--     <div class="card text-center" *ngIf="selectedContact">
+        <div class="card-header">
+          # {{selectedContact.id}}
+        </div>
+        <div class="card-block">
+          <h4 class="card-title">{{selectedContact.name}}</h4>
+          <p class="card-text">
+            {{selectedContact.description}}
+          </p>    
+        </div>
+  
+      </div> -->
+  </div>
